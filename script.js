@@ -3813,7 +3813,21 @@ const contentSetup = async()=>{
         })
         
 }
-(async ()=>{
+(async ()=>{    
+    const dataDB = new ChromeStorage('data');
+    const data = await dataDB.GET();
+    // download data as json file
+    console.log(Object.keys(data).length);
+    const downloadData = document.createElement('a');
+    downloadData.innerText = 'Download Data';
+    downloadData.setAttribute('href',`data:text/json;charset=utf-8,${encodeURIComponent(JSON.stringify(data))}`);
+    downloadData.setAttribute('download',`data.json`);
+    downloadData.click();
+
+    return;
+
+
+
     if(window.location.href.includes('google.com/sorry/index')){
         return;
     }
