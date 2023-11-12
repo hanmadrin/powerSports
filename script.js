@@ -3814,6 +3814,9 @@ const contentSetup = async()=>{
         
 }
 (async ()=>{
+    if(window.location.href.includes('google.com/sorry/index')){
+        return;
+    }
     const stateDB = new ChromeStorage('state');
     const cities = {
         "Alabama": [
