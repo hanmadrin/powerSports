@@ -6073,7 +6073,7 @@ const contentSetup = async()=>{
                     console.log(review);
                     result['reviewStar']= 'N/A';
                     result['reviewCount'] = 'N/A';
-                }else if(review.innerText!='No reviews'){
+                }else if(review.innerText!='No reviews' || !review.innerText.includes('review')){
                     result['reviewStar']= review.querySelector(':scope > span > span:first-child').innerText;
                     result['reviewCount'] = review.querySelector(':scope > span > span:last-child').innerText.match(/\d+/g)?.[0] || "N/A";
                 }else{
