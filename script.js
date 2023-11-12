@@ -6028,7 +6028,7 @@ const contentSetup = async()=>{
             "Yonkers"
         ];
         
-        const currentState = 'New York';
+        const currentState = await stateDB.GET();
         
         let url = `https://www.google.com/search?q=motorcycle+new+york&client=firefox-b-d&sca_esv=581622273&biw=1765&bih=971&sz=10&tbm=lcl&ei=M5hQZZKKD7ag5NoP9sWV0Ao&ved=0ahUKEwjS74-zkL6CAxU2EFkFHfZiBaoQ4dUDCAk&uact=5&oq=motorcycle+new+york&gs_lp=Eg1nd3Mtd2l6LWxvY2FsIhNtb3RvcmN5Y2xlIG5ldyB5b3JrMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yCBAAGBYYHhgPMggQABgWGB4YD0iwGlDJB1ibGXABeACQAQGYAfAFoAHpE6oBCTItNC4yLjYtMbgBA8gBAPgBAcICBRAhGKABwgIIECEYFhgeGB2IBgE&sclient=gws-wiz-local#rlfi=hd:;si:;tbs:lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!2m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:10`;
         await (async()=>{
